@@ -97,8 +97,7 @@ const Hero = () => {
   }, []);
   return (
     <header ref={bg} id="home">
-      <div ref={sectionRef}>
-        <Navbar />
+      <div ref={sectionRef} >
         <div className="flex justify-between items-center w-full px-5 lg:py-20 md:py-10 py-15 z-5 relative">
           <div className="md:block hidden">
             <div className="flex flex-col gap-5 items-center w-fit">
@@ -118,7 +117,7 @@ const Hero = () => {
               </FadeInBox>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 mt-25">
             <FadeInBox
               from={{ clipPath: "inset(0% 150% 0% 0%)" }}
               to={{ clipPath: "inset(0% 0% 0% 0%)", duration: 1.5 }}

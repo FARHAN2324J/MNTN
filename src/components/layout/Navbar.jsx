@@ -18,7 +18,7 @@ export default Navbar;
 
 const NavMd = () => {
   return (
-    <div className="md:block hidden">
+    <div className="md:block hidden fixed w-full z-[9999]">
       <nav className="flex items-center justify-between bg-gradient-to-t from-[#0b1d2600] to-[#0b1d26be] lg:px-15 lg:py-10 md:px-10 md:py-10 px-5 py-5 z-[9999] relative">
         <FadeInBox>
           <h2 className="text-[#FFF] font-[Cormorant-Bold] tracking-wider lg:text-4xl md:text-3xl text-2xl">
@@ -87,8 +87,8 @@ const NavSm = () => {
   };
 
   return (
-    <div>
-      <div className="fixed z-[9999] top-0 w-full md:hidden block">
+    <div className="z-[9999] fixed w-full">
+      <div className="fixed top-0 w-full md:hidden block">
         <button
           onClick={toggleMenu}
           className="bg-[#051015af] mx-2 my-2 text-[#ffffffd8] font-medium text-xl p-1.5 rounded-lg font-[Cormorant-Regula] transition-all duration-300 hover:bg-[#051015] hover:scale-105"
