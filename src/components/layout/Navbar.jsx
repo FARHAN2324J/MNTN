@@ -103,13 +103,13 @@ const NavSm = () => {
           <div className="flex flex-col gap-8">
             <ul className="flex flex-col gap-5">
               <li className="font-sans text-[#ffffffd8] text-2xl transition-all duration-300 hover:translate-x-3">
-                <a href="#">Equipment</a>
+                <span>Equipment</span>
               </li>
               <li className="font-sans text-[#ffffffd8] text-2xl transition-all duration-300 hover:translate-x-3">
-                <a href="#">About us</a>
+                <span onClick={() => scrollToSection("about-us")}>About us</span>
               </li>
               <li className="font-sans text-[#ffffffd8] text-2xl transition-all duration-300 hover:translate-x-3">
-                <a href="#">Blog</a>
+                <span>Blog</span>
               </li>
             </ul>
             <div className="social-container">
