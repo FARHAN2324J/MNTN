@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Cormorant-Regula;
+  src: url("./assets/fonts/static/Cormorant-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Cormorant-Medium;
+  src: url("./assets/fonts/static/Cormorant-Medium.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Cormorant-Bold;
+  src: url("./assets/fonts/static/Cormorant-Bold.ttf");
+  font-display: swap;
+}
+
+body {
+  background-color: #0b1d26;
+}
+
+/* #FBD784  */
+.cta {
+  position: relative;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #fbd78453;
+  width: 10px;
+  height: 10px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  color: #fbd784;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #fbd784;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  height: 100%;
+  background: #fbd78453;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
