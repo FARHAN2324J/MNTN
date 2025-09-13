@@ -8,7 +8,7 @@ export const scrollToSection = (sectionId) => {
 
   if (section) {
     gsap.to(window, {
-      duration: 3,
+      duration: 2,
       scrollTo: {
         y: section,
       },

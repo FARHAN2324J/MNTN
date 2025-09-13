@@ -97,8 +97,8 @@ const Hero = () => {
   }, []);
   return (
     <header ref={bg} id="home">
-      <div ref={sectionRef} >
-        <div className="flex justify-between items-center w-full px-5 lg:py-20 md:py-10 py-15 z-5 relative">
+      <div ref={sectionRef}>
+        <div className="flex justify-between items-center w-full px-5 lg:py-25 md:py-25 py-15 z-5 relative">
           <div className="md:block hidden">
             <div className="flex flex-col gap-5 items-center w-fit">
               <span className="text-[#FFF] my-5 md:text-md text-sm font-medium rotate-90">
@@ -117,7 +117,7 @@ const Hero = () => {
               </FadeInBox>
             </div>
           </div>
-          <div className="flex flex-col gap-4 mt-25">
+          <div className="flex flex-col gap-4 ">
             <FadeInBox
               from={{ clipPath: "inset(0% 150% 0% 0%)" }}
               to={{ clipPath: "inset(0% 0% 0% 0%)", duration: 1.5 }}
@@ -192,7 +192,6 @@ const Hero = () => {
           alt=""
           id="about"
           className=" absolute xl:top-[90%]  lg:top-[85%] md:top-[90%] top-[80%] brightness-50 -z-1 w-full object-cover"
-          // 2xl !!
         />
       </div>
     </header>

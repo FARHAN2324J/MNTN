@@ -1,6 +1,5 @@
 import gsap from "gsap";
 import { useEffect, useRef, useState } from "react";
-import { RiAccountCircle2Line } from "react-icons/ri";
 import FadeInBox from "../common/FadeInBox";
 import { BsInstagram, BsTwitter } from "react-icons/bs";
 import { scrollToSection } from "../../utils/scrollUtils";
@@ -19,29 +18,20 @@ export default Navbar;
 const NavMd = () => {
   return (
     <div className="md:block hidden fixed w-full z-[9999]">
-      <nav className="flex items-center justify-between bg-gradient-to-t from-[#0b1d2600] to-[#0b1d26be] lg:px-15 lg:py-10 md:px-10 md:py-10 px-5 py-5 z-[9999] relative">
+      <nav className="flex items-center justify-between bg-gradient-to-t from-[#0b1d2600] to-[#0b1d26be] lg:px-15  md:px-10  px-5 py-5 z-[9999] relative">
         <FadeInBox>
-          <h2 className="text-[#FFF] font-[Cormorant-Bold] tracking-wider lg:text-4xl md:text-3xl text-2xl">
+          <h2
+            onClick={() => scrollToSection("about-us")}
+            className="text-[#FFF] font-[Cormorant-Bold] tracking-wider lg:text-4xl md:text-3xl text-2xl"
+          >
             MNTN
           </h2>
         </FadeInBox>
         <ul className="flex items-center lg:gap-8 md:gap-6 gap-4">
-          <li className="font-sans text-[#FFF] font-bold md:text-md">
-            <span>Equiqment</span>
-          </li>
           <li className="font-sans cursor-pointer text-[#FFF] font-bold md:text-md">
             <span onClick={() => scrollToSection("about-us")}>About us</span>
           </li>
-          <li className="font-sans text-[#FFF] font-bold md:text-md">
-            <span>Blog</span>
-          </li>
         </ul>
-        <div className="flex items-center gap-2 cursor-pointer">
-          <RiAccountCircle2Line size={24} color="white" />
-          <a href="" className="font-sans text-[#FFF] font-bold">
-            Account
-          </a>
-        </div>
       </nav>
     </div>
   );
@@ -86,6 +76,14 @@ const NavSm = () => {
     setIsOpen(!isOpen);
   };
 
+  const handleMenuItemClick = (sectionId) => {
+    if (isOpen) {
+      toggleMenu();
+    }
+
+    scrollToSection(sectionId);
+  };
+
   return (
     <div className="z-[9999] fixed w-full">
       <div className="fixed top-0 w-full md:hidden block">
@@ -103,13 +101,9 @@ const NavSm = () => {
           <div className="flex flex-col gap-8">
             <ul className="flex flex-col gap-5">
               <li className="font-sans text-[#ffffffd8] text-2xl transition-all duration-300 hover:translate-x-3">
-                <span>Equipment</span>
-              </li>
-              <li className="font-sans text-[#ffffffd8] text-2xl transition-all duration-300 hover:translate-x-3">
-                <span onClick={() => scrollToSection("about-us")}>About us</span>
-              </li>
-              <li className="font-sans text-[#ffffffd8] text-2xl transition-all duration-300 hover:translate-x-3">
-                <span>Blog</span>
+                <span onClick={() => handleMenuItemClick("about-us")}>
+                  About us
+                </span>
               </li>
             </ul>
             <div className="social-container">
@@ -131,7 +125,10 @@ const NavSm = () => {
         </nav>
       </div>
       <div className="fixed top-0 right-0 m-3 md:hidden block">
-        <h2 className="z-[9999] text-[#FFF] font-[Cormorant-Bold] tracking-wider lg:text-4xl md:text-3xl text-2xl">
+        <h2
+          onClick={() => scrollToSection("home")}
+          className="z-[9999] text-[#FFF] font-[Cormorant-Bold] tracking-wider lg:text-4xl md:text-3xl text-2xl"
+        >
           MNTN
         </h2>
       </div>
